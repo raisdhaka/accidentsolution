@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 Auth::routes(['register'=>false]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/', function () {
     return view('index');
@@ -42,10 +43,12 @@ Route::get('/howitworks', function () {
     return view('howitworks');
 })->name('howitworks');
 
-Route::get('/join', function () {
-    return view('join');
-})->name('join');
+// Route::get('/join', function () {
+//     return view('join');
+// })->name('join');
 
+Route::get('/join',[HomeController::class,'join'])->name('join');
+Route::get('/checkout',[HomeController::class,'checkout'])->name('checkout');
 Route::get('/personalinjuryattorney', function () {
     return view('personalinjuryattorney');
 })->name('personalinjuryattorney');

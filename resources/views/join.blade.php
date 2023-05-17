@@ -78,7 +78,7 @@
                     <p><br></p>
                     <table class="froala-table" style="width: 100%;">
                         <tbody>
-                            <tr>
+                            {{-- <tr>
                                 <td class="fpad-lg"
                                     style="width: 30%; vertical-align: top; text-align: center; background: rgb(235, 239, 243) none repeat scroll 0% 0%;">
                                     <h2><span style="color: rgb(51, 51, 51);font-size: 36px;"><strong>Silver</strong></span>
@@ -172,58 +172,60 @@
                                     <hr>
                                     <p><br></p>
                                 </td>
-                            </tr>
+                            </tr> --}}
                             <tr>
-                                <td class="fpad-lg"
-                                    style="width: 30%; vertical-align: top; text-align: center; background: rgb(235, 239, 243) none repeat scroll 0% 0%;">
-                                    <h2><span
-                                            style="color: rgb(51, 51, 51);font-size: 36px;"><strong>Platinum<br></strong></span>
-                                    </h2>
-                                    <p><span style="color: rgb(51, 51, 51);font-size: 24px;">Select for Pricing</span></p><a
-                                        class="btn btn-lg btn-success" href="/checkout/8" rel="noopener noreferrer"
-                                        target="_blank"><strong>SELECT PLAN</strong></a>
-                                </td>
-                                <td style="width: 70%; vertical-align: middle;">
-                                    <p style="line-height: 1.5;"><br></p>
-                                    <table class="froala-table" style="width: 100%;">
-                                        <tbody>
-                                            <tr>
-                                                <td class="nopad fr-cell-handler " style="width: 50%; vertical-align: top;">
-                                                    <ul class="nomargin">
-                                                        <li style="line-height: 2;"><strong><span
-                                                                    style="font-size: 18px;">Listing on Consumer
-                                                                    Site</span></strong></li>
-                                                        <li style="line-height: 2;"><strong><span
-                                                                    style="font-size: 18px;">Individual Email
-                                                                    Tracking</span></strong></li>
-                                                        <li style="line-height: 2;"><strong><span
-                                                                    style="font-size: 18px;">Social Media
-                                                                    Placement</span></strong></li>
-                                                        <li style="line-height: 2;"><strong><span
-                                                                    style="font-size: 18px;">Option to Include Member Blog
-                                                                    on Consumer Site</span></strong></li>
-                                                    </ul>
-                                                </td>
-                                                <td class="nopad fr-cell-fixed " style="width: 50%; vertical-align: top;">
-                                                    <ul class="nomargin">
-                                                        <li style="line-height: 2; font-weight: bold; font-size: 18px;">
-                                                            Real Time Analytics</li>
-                                                        <li id="isPasted"
-                                                            style="line-height: 2; font-size: 18px; font-weight: bold;">
-                                                            <span class="fr-unprocessed"
-                                                                style="font-size: 18px;"><strong>Individual Phone
-                                                                    Number</strong></span></li>
-                                                        <li id="isPasted" style="line-height: 2;"><span
-                                                                class="fr-unprocessed"><strong>
-                                                                    <font size="4">Major Search Engine Listings.
-                                                                    </font>
-                                                                </strong></span></li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
+                                @foreach ($packages as $package)
+
+                                    <td class="fpad-lg"
+                                        style="width: 30%; vertical-align: top; text-align: center; background: rgb(235, 239, 243) none repeat scroll 0% 0%;">
+                                        <h2><span style="color: rgb(51, 51, 51);font-size: 36px;"><strong>{{$package->Name}}</strong></span>
+                                        </h2>
+                                        <p><span style="color: rgb(51, 51, 51);font-size: 24px;">Select for Pricing</span></p><a
+                                            class="btn btn-lg btn-success" href="{{route('checkout', $package->id)}}" rel="noopener noreferrer"
+                                            target="_blank"><strong>SELECT PLAN</strong></a>
+                                    </td>
+                                    <td style="width: 70%; vertical-align: middle;">
+                                        <p style="line-height: 1.5;"><br></p>
+                                        <table class="froala-table" style="width: 100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="nopad fr-cell-handler " style="width: 50%; vertical-align: top;">
+                                                        <ul class="nomargin">
+                                                            <li style="line-height: 2;"><strong><span
+                                                                        style="font-size: 18px;">Listing on Consumer
+                                                                        Site</span></strong></li>
+                                                            <li style="line-height: 2;"><strong><span
+                                                                        style="font-size: 18px;">Individual Email
+                                                                        Tracking</span></strong></li>
+                                                            <li style="line-height: 2;"><strong><span
+                                                                        style="font-size: 18px;">Social Media
+                                                                        Placement</span></strong></li>
+                                                            <li style="line-height: 2;"><strong><span
+                                                                        style="font-size: 18px;">Option to Include Member Blog
+                                                                        on Consumer Site</span></strong></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td class="nopad fr-cell-fixed " style="width: 50%; vertical-align: top;">
+                                                        <ul class="nomargin">
+                                                            <li style="line-height: 2; font-weight: bold; font-size: 18px;">
+                                                                Real Time Analytics</li>
+                                                            <li id="isPasted"
+                                                                style="line-height: 2; font-size: 18px; font-weight: bold;">
+                                                                <span class="fr-unprocessed"
+                                                                    style="font-size: 18px;"><strong>Individual Phone
+                                                                        Number</strong></span></li>
+                                                            <li id="isPasted" style="line-height: 2;"><span
+                                                                    class="fr-unprocessed"><strong>
+                                                                        <font size="4">Major Search Engine Listings.
+                                                                        </font>
+                                                                    </strong></span></li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                @endforeach
                             </tr>
                             <tr>
                                 <td class="nopad" colspan="2">
