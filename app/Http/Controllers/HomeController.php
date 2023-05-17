@@ -26,9 +26,16 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
     public function join()
     {
         $packages = Packages::all();
         return view('join', compact('packages'));
+    }
+
+    public function checkout($id)
+    {
+        $package = Packages::where('id', $id)->first();
+        return view('join', compact('package'));
     }
 }

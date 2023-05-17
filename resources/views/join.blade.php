@@ -226,6 +226,13 @@
                                         </table>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td class="nopad" colspan="2">
+                                        <p><br></p>
+                                        <hr>
+                                        <p><br></p>
+                                    </td>
+                                </tr>
                                 @endforeach
                             <tr>
                                 <td class="nopad" colspan="2">
