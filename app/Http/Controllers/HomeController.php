@@ -29,6 +29,6 @@ class HomeController extends Controller
     public function join()
     {
         $packages = Packages::all();
-        return view('join', compact(packages));
+        return view('join', compact('packages'));
     }
 }
