@@ -48,7 +48,7 @@ Route::get('/howitworks', function () {
 // })->name('join');
 
 Route::get('/join',[HomeController::class,'join'])->name('join');
-Route::get('/checkout',[HomeController::class,'checkout'])->name('checkout');
+Route::get('/checkout/{id}',[HomeController::class,'checkout'])->name('checkout');
 Route::get('/personalinjuryattorney', function () {
     return view('personalinjuryattorney');
 })->name('personalinjuryattorney');
