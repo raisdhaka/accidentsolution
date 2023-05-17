@@ -28,12 +28,13 @@
                             <li class='bmargin xs-nomargin'><a href='{{route('login')}}' id='link251' class='rpad bmargin'>Member
                             Login</a></li>
                             @else
-                            <li class="nav-item dropdown">
+                            <li class='bmargin xs-nomargin'>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    Hello {{ Auth::user()->name }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li class='bmargin xs-nomargin'>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -43,7 +44,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-                                </div>
+
                             </li>
                             @endguest
                     <li class='bmargin norpad xs-nopad xs-vmargin'><a href='/join' id='link252'
