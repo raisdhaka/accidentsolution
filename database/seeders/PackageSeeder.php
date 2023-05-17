@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Packages;
 
 class PackageSeeder extends Seeder
 {
@@ -12,7 +13,7 @@ class PackageSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
+        Packages::create([
             'Name' => 'Silver',
             'Monthly_amount' => "1500.00",
             'Monthly_text' => "per Month (Cancel Anytime)",
@@ -23,7 +24,7 @@ class PackageSeeder extends Seeder
             'Annually_amount' => "15300.00",
             'Annually_text' => "per Year Save 15% with this option",
         ]);
-        User::create([
+        Packages::create([
             'Name' => 'Platinum',
             'Monthly_amount' => "2500.00",
             'Monthly_text' => "per Month (Cancel Anytime)",
@@ -34,7 +35,7 @@ class PackageSeeder extends Seeder
             'Annually_amount' => "25500.00",
             'Annually_text' => "per Year Save 15% with this option",
         ]);
-        User::create([
+        Packages::create([
             'Name' => 'Gold',
             'Monthly_amount' => "1500.00",
             'Monthly_text' => "per Month (Cancel Anytime)",
