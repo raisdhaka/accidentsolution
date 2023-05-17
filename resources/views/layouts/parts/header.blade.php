@@ -29,9 +29,9 @@
                             Login</a></li>
                             @else
                             <li class='bmargin xs-nomargin'>
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     Hello {{ Auth::user()->name }}
-                                </a>
+                                </a> --}}
 
                                 <li class='bmargin xs-nomargin'>
 
