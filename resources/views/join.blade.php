@@ -173,8 +173,8 @@
                                     <p><br></p>
                                 </td>
                             </tr> --}}
+                            @foreach ($packages as $package)
                             <tr>
-                                @foreach ($packages as $package)
 
                                     <td class="fpad-lg"
                                         style="width: 30%; vertical-align: top; text-align: center; background: rgb(235, 239, 243) none repeat scroll 0% 0%;">
@@ -225,8 +225,8 @@
                                             </tbody>
                                         </table>
                                     </td>
+                                </tr>
                                 @endforeach
-                            </tr>
                             <tr>
                                 <td class="nopad" colspan="2">
                                     <p><span class="fr-unprocessed" style="font-size: 18px;"><strong><br></strong></span>
