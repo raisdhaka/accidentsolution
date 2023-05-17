@@ -36,6 +36,6 @@ class HomeController extends Controller
     public function checkout($id)
     {
         $package = Packages::where('id', $id)->first();
-        return view('join', compact('package'));
+        return view('checkout', compact('package'));
     }
 }
