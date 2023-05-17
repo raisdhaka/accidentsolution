@@ -25,7 +25,7 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('index');
-})->name('home');
+})->middleware('auth')->name('home');
 
 Route::get('/about', function () {
     return view('about');
