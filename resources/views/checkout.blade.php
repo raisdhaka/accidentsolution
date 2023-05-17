@@ -57,6 +57,17 @@
                 float: none !important;
                 text-align: center;
             }
+            .offset-sm-3, .offset-3 {
+                margin-left: 25%;
+            }
+
+            .mb-3, h2, h3, .form-check {
+                margin-bottom: 12px;
+            }
+
+            .border {
+                border: 1px solid #777;
+            }
         </style>
         <div class="hero_section_container">
             <div class="container">
