@@ -18,5 +18,15 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        User::create([
+            'name' => 'Admin User',
+            'email' => 'admin@demo.com',
+            'password' => bcrypt('demo12345678'),
+        ]);
+
+        $this->call([
+            PackageSeeder::class,
+        ]);
     }
 }
