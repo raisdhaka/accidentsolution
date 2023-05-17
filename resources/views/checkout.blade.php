@@ -74,7 +74,7 @@
 
             <div class="row">
 
-                <div class="col-md-12">
+                <div class="col-md-6 offset-3 border">
 
                     <h3>Enter Email and Create Password</h3>
 
